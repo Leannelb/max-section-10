@@ -10,6 +10,7 @@ import { ShoppingService } from './shopping.service';
 })
 export class ShoppingListComponent implements OnInit {
 
+  // uninitalised property
   ingredients: Ingredient[];
 
   constructor(private shoppingService: ShoppingService) { }
@@ -18,7 +19,5 @@ export class ShoppingListComponent implements OnInit {
     this.ingredients = this.shoppingService.getIngredients();
   }
 
-  onIngredientAdded(ingredient: Ingredient) {
-    this.shoppingService.addIngredient(ingredient);
-  }
+  // can also get rid of onIngredientAdded, this will be done in the service too
 }

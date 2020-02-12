@@ -30,7 +30,7 @@ import { ShoppingService } from './shopping-list/shopping.service';
     BrowserModule,
     FormsModule,
   ],
-  providers: [ShoppingService],
+  providers: [ShoppingService], // added this to app.module as I want to acess it from recipe and shopping components, AND other services.
   bootstrap: [AppComponent]
 })
 export class AppModule { }

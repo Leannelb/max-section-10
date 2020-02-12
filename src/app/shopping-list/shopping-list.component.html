@@ -1,7 +1,8 @@
 <div class="row">
   <div class="col-xs-10">
-    <app-shopping-edit
-      (ingredientAdded)="onIngredientAdded($event)"></app-shopping-edit>
+    <app-shopping-edit></app-shopping-edit>
+    <!-- removed the listener as we don't need it anymore.. were going to 
+    retrieve the item with the service instead now -->
     <hr>
     <ul class="list-group">
       <a

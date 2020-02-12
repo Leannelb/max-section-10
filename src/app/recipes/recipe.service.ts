@@ -1,8 +1,10 @@
 import { EventEmitter } from '@angular/core';
+// put angualr inports at the very top, good practice.
 
 import { Recipe } from './recipe.model';
 
 export class RecipeService {
+    // adding a public property, recipeSelected ~ object instanciated by using event emitter
     recipeSelected = new EventEmitter<Recipe>();
 
     private recipes: Recipe[] = [

@@ -16,10 +16,11 @@ export class RecipesComponent implements OnInit {
 
   ngOnInit() {
     this.recipeService.recipeSelected
-      .subscribe(
-          (recipe: Recipe) => {
-            this.selectedRecipe = recipe;
-          }
+      .subscribe( // subscribe to it to recieve any changes
+          (recipe: Recipe) => { // recieving data of type: Recipe, because of how we configured the event emitter, to give back a recipe.
+            // this is an es6 arrow function
+            this.selectedRecipe = recipe; 
+          } 
       );
   }
 
